@@ -112,9 +112,9 @@ class Gui:
             if r < 1:
                 p.x = r * cos(2 * index * self.alpha * pi)
                 p.y = r * sin(2 * index * self.alpha * pi)
-            x = int(p.x * 1000) + self.width / 2
+            x = int(p.x * self.SCALE_COEF * self.scale.get()) + int(self.width / 2)
             x = x if x >= 0 else 0
-            y = int(-p.y * self.SCALE_COEF * self.scale.get()) + self.height / 2
+            y = int(-p.y * self.SCALE_COEF * self.scale.get()) + int(self.height / 2)
             y = y if y >= 0 else 0
             self.img.put(color, (x, y, x + 2, y + 2))
         self.alpha += self.d_alpha
