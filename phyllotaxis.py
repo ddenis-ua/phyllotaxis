@@ -78,6 +78,7 @@ class Gui:
         self.entry.insert(0, self.DEFAULT_ALPHA)
         self.entry.configure(state=NORMAL)
         self.scale.set(self.DEFAULT_SCALE)
+        self.scale.configure(state=NORMAL)
         self.speed.set(self.DEFAULT_SPEED)
         self.start_btn.configure(state=NORMAL)
         self.pause_btn.configure(state=DISABLED)
